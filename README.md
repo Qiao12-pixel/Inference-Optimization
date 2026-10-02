@@ -15,6 +15,13 @@ Decoder-only Transformer 的推理、量化、KV Cache 和 CUDA 性能优化路�
 - 后端：CPU SIMD / 多线程，以及 CUDA F32/Q8_0/Q4_0/Q4_1 Linear、GPU KV Cache 和 GPU Attention。
 - 验证：自研 C++ 测试、Python/NumPy reference forward、Golden Logits 与 CLI 回归测试。
 
+## 整体架构
+
+![mini-llama.cpp 整体架构](docs/diagrams/system-architecture.drawio.png)
+
+图中实线表示主要运行时数据流，虚线表示循环、初始化或验证关系。可编辑源文件：
+[system-architecture.drawio](docs/diagrams/system-architecture.drawio)。
+
 ## 实测性能
 
 测试模型为 `Qwen2-0.5B-Instruct-Q8_0.gguf`，固定 seed、三次运行取中位数。

@@ -7,6 +7,10 @@ __pycache__/
 *.dSYM/
 .claude/settings.local.json
 .vscode
-docs
+docs/*
+!docs/diagrams/
+docs/diagrams/*
+!docs/diagrams/system-architecture.drawio
+!docs/diagrams/system-architecture.drawio.png
 models
 models/chat/Qwen2-0.5B-Instruct-Q8_0.gguf
